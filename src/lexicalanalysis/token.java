@@ -7,7 +7,7 @@ public class token
 	//enum that create tokens and use them 
 public static enum TokenType
 {
-	plus, minus, times, divide,number, endofline, error;
+	plus, minus, times, divide,number, equal, lessthan, lessthan_equal, greaterthan, greaterthan_equal, notequal, lparen, rparen, string, label, identifier,print ,endofline, error;
 	
 
 }
@@ -54,6 +54,54 @@ public String toString()
    {
 	   return "[error] please enter appropriate";//says error
 	   
+   }
+   if(token == TokenType.equal)
+   {
+	   return "equal ["+ value + "]";//returns sign with the token
+   }
+   if(token == TokenType.lessthan)
+   {
+	   return "less than ["+ value + "]";//returns sign with the token
+   }
+   if(token == TokenType.greaterthan)
+   {
+	   return "greater than ["+ value + "]";//returns sign with the token
+   }
+   if(token == TokenType.lessthan_equal)
+   {
+	   return "less than or equal ["+ value + "]";//returns sign with the token
+   }
+   if(token == TokenType.greaterthan_equal)
+   {
+	   return "greater than or equal ["+ value + "]";//returns sign with the token
+   }
+   if(token == TokenType.notequal)
+   {
+	   return "not equal ["+ value + "]";//returns sign with the token
+   }
+   if(token == TokenType.lparen)
+   {
+	   return "left parenthesis ["+ value + "]";//returns sign with the token
+   }
+   if(token == TokenType.rparen)
+   {
+	   return "right parenthesis ["+ value + "]";//returns sign with the token
+   }
+   if(token == TokenType.string)
+   {
+	   return "string ["+ value + "]";//returns sign with the token
+   }
+   if(token == TokenType.label)
+   {
+	   return "label ["+ value + "]";//returns sign with the token
+   }
+   if(token == TokenType.print)
+   {
+	   return "knownword [PRINT]";//returns sign with the token
+   }
+   if(token == TokenType.identifier)
+   {
+	   return "identifier ["+ value +"]";//returns sign with the token
    }
    return token.toString();
 	   

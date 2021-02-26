@@ -61,16 +61,19 @@ public class lexer
 			//}
 			
 		   //we slit based of space if exists in the expression if that has
-			if(input.contains(" ") && !(input.contains("\"")))
+			if(input.contains(" ") )
 			{
-				
-			str = input.split(" ");
-			}
-			else if(input.contains(" ") && (input.contains("\"")))
-			{
-				
-			str = input.split("\"");
-			}
+				if((input.contains("\"")))
+				{
+					
+				str = input.split("\"");
+				}
+				else
+				{
+			     str = input.split(" ");
+			    }
+				}
+			
 		
 			
 			//if it dosent have a space in between then we split on symbol and digit basis.
